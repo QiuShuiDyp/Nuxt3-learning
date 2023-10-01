@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Copy Text on Click</title>
+  </head>
+  <body>
+    <p id="text-to-copy">Hello, world!</p>
+    <button id="copy-button">Copy Text</button>
+    <script>
+      const textToCopy = document.getElementById('text-to-copy')
+      const copyButton = document.getElementById('copy-button')
+
+      copyButton.addEventListener('click', () => {
+        const range = document.createRange()
+        range.selectNode(textToCopy)
+        window.getSelection().removeAllRanges()
+        window.getSelection().addRange(range)
+        document.execCommand('copy')
+        window.getSelection().removeAllRanges()
+        // alert('Text copied!')
+      })
+    </script>
+  </body>
+</html>
