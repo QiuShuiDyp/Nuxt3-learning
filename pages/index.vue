@@ -30,8 +30,10 @@ const {
   error,
   refresh,
 } = await useFetch(() => `/api/posts?page=${page.value}&size=${1}`)
-
-console.log(posts, 'data')
+// 配置标题
+useHead({
+  title: '文章列表',
+})
 </script>
 
 <style scoped></style>

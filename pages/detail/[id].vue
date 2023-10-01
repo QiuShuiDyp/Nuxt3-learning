@@ -36,6 +36,9 @@ function submit() {
     comment.value = ''
   }
 }
+useHead({
+  title: () => id as string,
+})
 </script>
 
 <style scoped></style>
