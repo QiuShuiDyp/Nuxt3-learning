@@ -16,7 +16,9 @@ export default defineNuxtConfig({
       },
     ],
   ],
-  nitro: {},
+  nitro: {
+    preset: 'vercel',
+  },
   postcss: {},
   vite: {},
   app: {
@@ -34,4 +36,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  // ssr: false,
 })
